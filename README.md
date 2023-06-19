@@ -37,7 +37,7 @@ For the data preparation for traditional NeRF dataset, please see [PointNeRF](ht
 
 * Install [Blender](https://www.blender.org/download/) and [BlenderNeRF](https://github.com/maximeraafat/BlenderNeRF) add-on.
 
-* Download our [Blender template]().
+* Download our [Blender template](https://drive.google.com/file/d/1-k3-4-fvnN4Ct_t81ffOQ6Hs4TEf4_uQ/view?usp=sharing).
 
   ![template](./assets/template-1687211856773-9.png)
 
@@ -45,7 +45,7 @@ For the data preparation for traditional NeRF dataset, please see [PointNeRF](ht
 
   ![rescale](./assets/rescale-1687211852351-7.png)
 
-* Press `space` to check the camera poses and scale are correct.
+* Press `space` to check the camera poses and scale are correct. You can set background to be transparent in `Film` option of `Render Properties` tag.
 
   ![check](./assets/check.gif)
 
