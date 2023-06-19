@@ -33,7 +33,31 @@ All the codes are tested in the following environment: Python 3.8; Ubuntu 20.04;
 
 ## Data Preparation
 
-For the data preparation for traditional NeRF dataset, please see [PointNeRF](https://github.com/Xharlie/pointnerf). We also show a pipeline to create your own dataset using [BlenderNeRF](https://github.com/maximeraafat/BlenderNeRF). 
+For the data preparation for traditional NeRF dataset, please see [PointNeRF](https://github.com/Xharlie/pointnerf). We also show a pipeline to create your own dataset using [BlenderNeRF](https://github.com/maximeraafat/BlenderNeRF). This pipeline is only applicable to `nerf_synthetic` data, please put the dataset in the `./data_src/nerf/nerf_synthetic` folder. 
+
+* Install [Blender](https://www.blender.org/download/) and [BlenderNeRF](https://github.com/maximeraafat/BlenderNeRF) add-on.
+
+* Download our [Blender template]().
+
+  ![template](./assets/template-1687211856773-9.png)
+
+* Open the template, import the target object and rescale it such that the object is within the `BlenderNeRF Sphere`
+
+  ![rescale](./assets/rescale-1687211852351-7.png)
+
+* Press `space` to check the camera poses and scale are correct.
+
+  ![check](./assets/check.gif)
+
+* There are two options to generate dataset
+
+  * Random camera pose around the sphere: Select `Camera on Sphere COS` option in `BlenderNeRF add-on`, chose `BlenderNeRF Camera`, run `PLAY COS`.
+
+  * Continuous camera pose rotate w.r.t z-axis: Select `Subset of Frames SOF` option in `BlenderNeRF add-on`, chose `Test Camera`, run `PLAY SOF`.
+
+* Decompress the zip file, open the `json` files, remove all suffix `.png`. And duplicate the `train` folder as `eval` folder and `test` folder, create corresponding `json` files (`transforms_eval.json`,  `transforms_test.json`)
+
+* Create corresponding scripts (e.g. `dragon_cuda.sh` ), note that you only need to change the `name`, `scan` options first in the bash file.  
 
 ## Initialization and Optimization
 
